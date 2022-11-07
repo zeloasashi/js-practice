@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>find biggest</title>
+</head>
+<body>
+    
+
+    <script>
+        function findBiggest(arr){
+            if(arr.length == 0){
+                return undefined;
+                // 如果arr沒東西會出現undefined
+            }
+            let biggestNumber = -1000000;
+            for (let i = 0; i < arr.length; i++){
+                console.log(arr[i], biggestNumber);
+                if (arr[i] > biggestNumber){
+                    biggestNumber = arr[i];
+                }
+            }
+            return biggestNumber;
+        }
+
+        console.log(findBiggest([15, 20, 22, 16, 7]));
+
+        // findBiggest([15, 20, 22, 16, 7]);
+        // findBiggest([1, 2, 3, 4, 5, 999]);
+        // findBiggest([-11, 0, -3, -4, -5, -999]);
+        // findBiggest([]);
+
+    </script>
+</body>
+</html>
