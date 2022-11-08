@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>計算array中有多少元素小於n</title>
+</head>
+<body>
+    
+
+    <script>
+        function findSmallCount(arr, n){
+            let counter = 0; // 計算array中有多少元素<n
+            for (let i = 0; i < arr.length ; i++){
+                if (arr[i] < n){
+                    // 如果array中的元素<n，counter+1，因為i從0開始算
+                    counter++;
+                }
+            }
+            return counter;
+        }
+        console.log(findSmallCount([1, 2, 3], 2));
+        console.log(findSmallCount([1, 2, 3], 5));
+        console.log(findSmallCount([1, 2, 3, 4, 5], 0));
+
+    </script>
+</body>
+</html>

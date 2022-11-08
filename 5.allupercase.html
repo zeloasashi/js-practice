@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>is All Upper Case</title>
+</head>
+<body>
+    
+
+    <script>
+        function isAllUpperCase(str) {
+            if (str.length == 0){
+                return false;
+            }
+            let allUpperCase = true;
+            for (let i = 0; i < str.length; i++){
+            // 用for迴圈檢查是不是每個字都是大寫
+                if (str[i] != str[i].toUpperCase()){
+                    allUpperCase = false;
+                }
+            }
+            return allUpperCase;
+        }
+        console.log(isAllUpperCase("abc"));
+        console.log(isAllUpperCase("ABC"));
+        console.log(isAllUpperCase("Abc"));
+
+
+    </script>
+</body>
+</html>

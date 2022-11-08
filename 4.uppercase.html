@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>is upper case</title>
+</head>
+<body>
+    
+
+    <script>
+        // 第一個字母要是大寫，否則會出現錯誤
+        function isUpperCase(str){
+            //空字串(會出現typeerror：undefined)的情況
+            if (str.length == 0){
+                return false;
+            }
+            // 如果字串的第一個字是大寫的話，出現正確，因為下面會直接回傳布林值，所以其實不用寫這麼長
+            // if (str[0] == str[0].toUpperCase()){
+            //     return true;
+            // } else {
+            //     return false;
+            // }
+            return str[0] == str[0].toUpperCase();
+        }
+        console.log(isUpperCase("ABC"));
+        console.log(isUpperCase(""));
+        console.log(isUpperCase("aaa"));
+
+    </script>
+</body>
+</html>

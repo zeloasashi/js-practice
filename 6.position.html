@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>upper case position</title>
+</head>
+<body>
+    
+
+    <script>
+        function position(str){
+            for (let i =0; i < str.length; i++){
+                if (str[i] == str[i].toUpperCase()){
+                    
+                    return str[i] + " " + i; // 印出大寫的字和他的位置index
+                }
+            } return -1; // 如果都是小寫就回傳-1
+        }
+
+        console.log(position("abc"));
+        console.log(position("ABC"));
+        console.log(position("aBc"));
+
+
+    </script>
+</body>
+</html>
