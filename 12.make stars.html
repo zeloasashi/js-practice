@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n*</title>
+</head>
+<body>
+    
+
+    <script>
+        function makeStars(n){
+            let result = "*";
+                for( let i = 2; i <= n; i++){
+                    let s = "\n"; // 換行
+                    // 因為裡面的for迴圈設定i=2,所以當n=1時不會執行這個迴圈
+                        for (let j = 0; j < i; j++){
+                            s += "*";
+                        } result += s;
+                } console.log(result);
+        }
+
+        makeStars(1);
+        console.log("-------------");
+        makeStars(4);
+        console.log("-------------");
+    </script>
+</body>
+</html>

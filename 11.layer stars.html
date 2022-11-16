@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多層星星</title>
+</head>
+<body>
+    
+
+    <script>
+        function stars(n){
+            for (let i =1; i <= n; i++){
+                let line ="";
+                for(let j = 0; j < i; j++){
+                    line += "*";
+                    // 當i=1時，j就會執行將*放進空字串1次
+
+                }
+                console.log(line);
+            }
+        }
+
+        stars(1);
+        console.log("-----------");
+        stars(5)
+    </script>
+</body>
+</html>
