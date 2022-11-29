@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>由小到大排序</title>
+</head>
+<body>
+    
+    <script>
+        // 不太好的解法，資料結構與演算的用法會比較好
+        function findMin(arr){
+            let min = arr[0];
+            for (let i = 1; i < arr.length; i++){
+                if (arr[i] < min){
+                    min = arr[i];
+                }
+            }
+            return min;
+        }
+
+        function mySort(arr){
+            let result = [];
+            while (arr.length > 0){
+                // 當array長度大於0時，要找到array中的最小值
+                let min = findMin(arr);
+                result.push(min); // 將最小值丟進result的array中
+                arr.splice(arr.indexOf(min), 1); // 將最小值用splice拔出來
+            }
+            return result;
+        }
+
+        console.log(mySort([17, 0, -3, 2, 1, 0.5])); 
+        console.log(mySort([10, 0, 3, 2.5, -1, 0.5])); 
+
+    </script>
+</body>
+</html>

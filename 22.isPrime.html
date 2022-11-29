@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>是否為質數</title>
+</head>
+<body>
+    
+
+    <script>
+        function isPrime(n){
+            if (n == 1){
+                return false;
+                // 1不是質數
+            }
+            let starter = 2; //所以2為起始數
+            while(starter < n){
+                if (n % starter == 0){
+                    return false;
+                    // 如果n被整除就是錯的
+                }
+                starter++;
+            }
+            return true;
+        }
+
+        console.log(isPrime(1));
+        console.log(isPrime(3));
+        console.log(isPrime(5));
+        console.log(isPrime(77));
+        console.log(isPrime(91));
+        console.log(isPrime(10000000));
+    </script>
+</body>
+</html>
