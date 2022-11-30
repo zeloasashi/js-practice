@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>金字塔</title>
+    <title>倒過來的金字塔</title>
 </head>
 <body>
     
@@ -21,21 +21,21 @@
             console.log(result);
         }
 
-    function pyramid(n){
-        let i = n - 1; //空格
-        let j = 1; // *
-        for (let k = 1; k <= n; k++){ // k表示第幾行
-            drawRow(i, j);
-            i--;
-            j += 2;
+        function inversePyramid(n){
+            let i = 0;
+            let j = 2 * n - 1;
+            for(let k = 1; k <= n; k++){
+                drawRow(i, j)
+                i++;
+                j -= 2;
+            }
         }
-    }
-    pyramid(1);
-    console.log("---------------");
-    pyramid(4);
-    console.log("---------------");
-    pyramid(10);
-    console.log("---------------");
+        inversePyramid(1);
+        console.log("---------------");
+        inversePyramid(4);
+        console.log("---------------");
+        inversePyramid(10);
+        console.log("---------------");
     </script>
 </body>
 </html>
