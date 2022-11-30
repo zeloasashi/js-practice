@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>兩個結尾字母是否相同</title>
+</head>
+<body>
+    <script>
+        function confirmEnd(str1, str2){
+            // 先設定變數，讓k=str1的最後一個字母
+            let k = str1.length - 1;
+            for (let i = str2.length - 1; i >= 0; i--){
+                if(str2[i] != str1[k]){
+                    console.log(false);
+                    return false;
+                } else{
+                    k--; //k從後面數過來
+                }
+            }
+            console.log(true);
+            return true;
+        }
+
+        confirmEnd("Bastian", "n"); // true
+        confirmEnd("Connor", "n"); // false
+        confirmEnd("Open sesame", "same"); // true
+    </script>
+</body>
+</html>
