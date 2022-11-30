@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>順著獨到著讀寫法都一樣</title>
+</head>
+<body>
+    
+    <script>
+        //while loop, !important
+
+        function palindrome(str){
+            let i = 0; //i 從頭開始
+            let j = str.length - 1; // j從最後開始
+            while (i < j){
+                if (str[i] != str[j]){
+                    console.log(false);
+                    return false;
+                }
+                // 如果都沒有出現錯誤訊息就做到最後
+                i++;
+                j--;
+            }
+            console.log(true);
+            return true;
+        }
+        palindrome("bearaeb"); // true
+        palindrome("Whatever revetahW"); // true
+        palindrome("Aloha, how are you today?"); // false
+    </script>
+</body>
+</html>
